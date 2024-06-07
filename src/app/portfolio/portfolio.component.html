@@ -1,0 +1,25 @@
+<section>
+    <div class="all-portfolio">
+        <div class="line-purpel-small"></div>
+        <div class="portfolio-center">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="line-purpel"></div>
+    </div>
+    <div class="projects" *ngFor="let test of names;let i = index"
+        [ngClass]="{'row': i % 2 === 0, 'row-reverse': i % 2 !== 0}" class="projects">
+        <div><img src="{{images[i]}}" alt=""></div>
+        <div>
+            <h3>{{names[i]}}</h3>
+            <div class="languages">{{languages[i]}}</div>
+            <div>
+                <span>{{text[i]}}</span>
+            </div>
+            <div class="buttons">
+                <a href="{{pages[i]}}"><button class="button">Live-Test</button></a>
+                <a href="{{githubs[i]}}"><button class="button-two">Github</button></a>
+            </div>
+
+        </div>
+    </div>
+</section>

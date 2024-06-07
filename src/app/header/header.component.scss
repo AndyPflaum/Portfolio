@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    gap: 0px;
+    opacity: 0px;
+    padding: 37px 200px;
+    background-color:
+        rgba(20, 29, 47, 1);
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            font-size: 30px;
+        
+            &:hover {
+                color: #70E61C;
+            }
+        }
+        p {
+            color: white;
+            font-size: 45px;
+            cursor: pointer;
+            position: relative;
+        }
+        .letter-s{
+        span{
+            color: linear;
+        }    
+        }
+}
+
+
+
+
+
+

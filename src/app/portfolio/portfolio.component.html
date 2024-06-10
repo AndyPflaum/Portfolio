@@ -6,7 +6,7 @@
         </div>
         <div class="line-purpel"></div>
     </div>
-    <div class="projects" *ngFor="let test of names;let i = index"
+    <div class="projects" *ngFor="let name of names;let i = index"
         [ngClass]="{'row': i % 2 === 0, 'row-reverse': i % 2 !== 0}" class="projects">
         <div><img src="{{images[i]}}" alt=""></div>
         <div>
@@ -19,7 +19,7 @@
                 <a href="{{pages[i]}}"><button class="button">Live-Test</button></a>
                 <a href="{{githubs[i]}}"><button class="button-two">Github</button></a>
             </div>
-
         </div>
     </div>
+    <img class="purpleShadow" src="assets/img/purpleShadow3.png" alt="">
 </section>

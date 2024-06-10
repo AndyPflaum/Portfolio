@@ -1,28 +1,33 @@
 .iAndInfo {
     display: flex;
-    justify-content: space-between;
-    padding-right: 200px;
-    padding-right: 200px;
+    justify-content: space-around;
+    position: relative;
     font-size: 60px;
     border-bottom-right-radius: 80%;
     z-index: 3;
     background-color: rgba(20, 29, 47, 1);
-    overflow: hidden;
-    height: 100vh;
+    height: 80vh;
+
+    .andy {
+        height: 750px;
+        width: 600px;
+        
+    }
 
     img {
         height: 730px;
         width: 730px;
-        padding-left: 5px;
+        position: absolute;
+        left: 0px;
+        z-index: -1;
+
     }
 
     .you {
         display: flex;
         align-items: center;
-        position: absolute;
-        top: 400px;
-        right: 200px;
-        button{
+        padding-right: 100px;
+        button {
             align-self: center;
             height: 60px;
             width: 130px;
@@ -32,6 +37,7 @@
             border-radius: 15px;
             transition: all 0.3s ease-in-out;
             margin-top: 40px;
+
             &:hover {
                 background-color: #9747FF;
                 height: 70px;
@@ -45,17 +51,17 @@
         transform: rotate(270deg);
         height: 0px;
         display: block;
-        position: absolute;
-        left: -160px;
-        animation: test 1s ease-in-out ;
+        animation: test 1s ease-in-out;
+
         @keyframes test {
             0% {
                 left: 900px;
             }
+
             80% {
                 left: -210px;
             }
-            
+
             100% {
                 left: -160px;
             }
@@ -65,23 +71,25 @@
     .frontend {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         font-size: 40px;
-        position: relative;
-        animation: front 1s ease-in-out ;
+        animation: front 1s ease-in-out;
+
         @keyframes front {
             0% {
                 top: -800px;
             }
+
             80% {
                 top: 50px;
             }
-            
+
             100% {
                 top: 0px;
             }
         }
-        .name{
+
+        .name {
             font-size: 63px;
         }
     }
@@ -89,6 +97,35 @@
     .linePurple {
         color: #9747FF;
     }
+}
 
-    
+@media(max-width:1330px) {
+    .iAndInfo{
+        justify-content: space-between;
+        .frontend{
+            align-items: flex-start;
+            .name{
+                font-size: 45px;
+            }
+        }
+        .you{
+            button{
+                margin-left: 140px;
+            }
+        }
+        
+    }
+}
+@media(max-width:1180px){
+.iAndInfo{
+    flex-direction: column;
+    height: 110vh;
+    .andy{
+        left: 300px;    
+    }
+    .you{
+        justify-content: center;
+        
+    }
+}
 }

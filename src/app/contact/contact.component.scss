@@ -1,63 +1,109 @@
-.contact{
+.contact {
     display: flex;
     align-items: center;
-    .line{
+
+    .line {
         width: 100px;
         border-bottom: 3px solid rgb(112, 230, 28);
         margin: 80px 0;
     }
-    h1{
+
+    h1 {
         padding-left: 100px;
     }
 }
-.container{
+
+.container {
     padding-left: 200px;
     padding-right: 200px;
     display: flex;
     align-items: flex-start;
     gap: 200px;
-    h3{
+    position: relative;
+
+    h3 {
         font-size: 32px;
     }
-    .mail{
+
+    .mail {
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px; /* Platz zwischen den Elementen */
+            gap: 30px;
+            /* Platz zwischen den Elementen */
         }
     }
-    
-    input{
+
+    input {
         width: 617px;
         height: 50px;
         border-radius: 10px;
         border: 2px solid rgba(151, 71, 255, 1);
         background-color: transparent;
         color: white;
-        
+
     }
-    textarea.big-input{
-        height:202px;
+
+    textarea.big-input {
+        height: 202px;
         width: 617px;
         border-radius: 10px;
         border: 2px solid rgba(151, 71, 255, 1);
         background-color: transparent;
         color: white;
-        
+
     }
-    button{
+
+    button {
         height: 58px;
         width: 253px;
         border-radius: 10px;
         color: white;
         background-color: rgba(133, 132, 132, 0.522);
     }
-    
+
+    img {
+        position: absolute;
+        top: -480px;
+        right: 0;
+        z-index: -1;
+    }
+
+    .goUp {
+        position: absolute;
+        right: 150px;
+        top: 500px;
+        cursor: pointer;
+        z-index: 5;
+    }
 }
-.end-line{
+
+.end-line {
     margin-top: 100px;
     width: 100%;
     border-bottom: 3px solid rgba(112, 230, 28, 1);
     z-index: 2;
+}
+
+@media(max-width:1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 100px;
+        gap: 100px;
+        .mail{
+            input{
+                width: 320px;
+            }
+            textarea{
+                width: 320px;
+            }
+        }
+
+        .goUp {
+            top: 800px;
+        }
+
+    }
 }

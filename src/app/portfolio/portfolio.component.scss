@@ -25,6 +25,7 @@
     padding-left: 200px;
     padding-right: 200px;
     gap: 100px;
+    z-index: 5;
 
     &.row {
         flex-direction: row;
@@ -39,6 +40,7 @@
         width: auto;
         border: none;
     }
+    
 
     h3 {
         font-size: 32px;
@@ -84,3 +86,40 @@
         }
     }
 }
+section{
+    position: relative;
+    .purpleShadow{
+        position: absolute;
+        top: 400px;
+        z-index: -1;
+    }
+
+}
+
+@media (max-width:1093px){
+    .all-portfolio{
+        padding-left: 19.333333%;
+    }
+    .projects{
+        padding-left: 100px;
+        padding-right: 100px;
+        display: block;
+        text-align: center;
+
+    }
+    img{
+        height: 400px;
+        top: 800px;
+    }
+}
+@media(max-width:610px){
+    .projects{
+        padding: 0px 25px;
+        img{
+            width: 350px;
+            height: 350px;
+            padding: 0px;
+        }
+    }
+}
+

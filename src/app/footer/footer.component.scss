@@ -1,0 +1,46 @@
+section {
+    height: 150px;
+    display: flex;
+    padding: 0px 200px;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: white;
+        &:hover{
+            text-decoration: underline;
+            color: rgba(151, 71, 255, 1);
+        }
+    }
+    img{
+        transition: transform 0.5s ease-in-out;
+        height: 30px;
+        width: 30px;
+        &:hover{
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+        
+    }
+
+    .images {
+        display: flex;
+        gap: 30px;
+    
+    }
+
+}
+
+@media (max-width: 1035px){
+    section{
+        padding: 37px 25px;
+    }
+    
+}
+@media (max-width: 800px){
+    section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

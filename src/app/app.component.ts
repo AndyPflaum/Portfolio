@@ -6,11 +6,13 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,IntroduceComponent,AppComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent],
+  imports: [RouterOutlet,HeaderComponent,IntroduceComponent,AppComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, ImpressumComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

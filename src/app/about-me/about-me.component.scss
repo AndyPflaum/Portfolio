@@ -1,128 +1,198 @@
  .about-me {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    gap: 50px;
-    animation: slideIn 1s ease-in-out;
-    @keyframes slideIn {
-        0% {
-            right: -1880px; // Startposition: außerhalb des sichtbaren Bereichs rechts
-        }
-        100% {
-            right: 0; // Endposition: linksbündig
-        }
-    }
+     display: flex;
+     flex-direction: row;
+     align-content: center;
+     align-items: center;
+     position: relative;
+     gap: 50px;
+     animation: slideIn 1s ease-in-out;
 
-    a {
-        color: white;
-        text-decoration: none;
+     @keyframes slideIn {
+         0% {
+             right: -1880px;
+         }
 
-        &:hover {
-            cursor: pointer;
-        }
-       
+         100% {
+             right: 0;
+         }
+     }
 
-    }
+     img {
+         transition: transform 0.5s ease-in-out;
 
-    .line {
-        width: 100px;
-        border-bottom: 3px solid #9747FF;
-        margin: 80px 0;
+         &:hover {
+             cursor: pointer;
+             transform: rotate(360deg);
+         }
+     }
 
-        img {
-            height: 30px;
-            width: 30px;
-            &:hover {
-                cursor: pointer;
+     a {
+         color: white;
+         text-decoration: none;
+
+         &:hover {
+             cursor: pointer;
+         }
+
+
+     }
+
+     .line {
+         width: 100px;
+         border-bottom: 3px solid #9747FF;
+         margin: 80px 0;
+
+         img {
+             height: 30px;
+             width: 30px;
+
+             &:hover {
+                 cursor: pointer;
+             }
+
+         }
+
+     }
+ }
+
+ .scroll {
+     transform: rotate(90deg);
+     position: absolute;
+     font-size: 20px;
+     top: 700px;
+     right: 100px;
+     cursor: pointer;
+     animation: move 1s ease-in-out infinite;
+
+     a {
+         text-decoration: none;
+         color: white;
+     }
+
+     @keyframes move {
+         0% {
+             top: 780px;
+         }
+
+         50% {
+             top: 800px;
+         }
+
+         100% {
+             top: 780px;
+         }
+     }
+ }
+
+ .performance {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     width: 35%;
+     padding-left: 200px;
+     font-size: 16px;
+     margin: 5px;
+
+     h1 {
+         font-size: 90px;
+     }
+
+     .img {
+         height: 50px;
+         width: 50px;
+     }
+ }
+
+ .itIsMe {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     .box {
+         display: flex;
+         gap: 30px;
+     }
+
+     .profilbild {
+         display: flex;
+         align-items: center;
+         img {
+             height: 300px;
+             width: auto;
+             border: 3px solid rgba(112, 230, 28, 1);
+             border-radius: 50%;
+             z-index: 5;
+         }
+     }
+ }
+
+ .purple {
+     position: absolute;
+     height: 800px;
+     width: 600px;
+     top: 900px;
+     right: 0px;
+     z-index: -1;
+ }
+
+ .line-right {
+     min-width: 230px;
+     padding-right: 0px;
+     border-bottom: 3px solid rgba(112, 230, 28, 1);
+     // position: absolute;
+     right: 0;
+     z-index: 2;
+ }
+ @media (max-width: 1280px){
+    .itIsMe{
+        .performance{
+            width: 100%;
+            padding-left: 100px;
+            h1{
+                text-align: center;
             }
-
+            .profilbild{
+                .line-right{
+                    min-width: 95px;
+                }
         }
-
+        
     }
+    
 }
-
-.scroll {
-    transform: rotate(90deg);
-    position: absolute;
-    font-size: 20px;
-    top: 700px;
-    right: 100px;
-    cursor: pointer;
-    animation: move 1s ease-in-out infinite;
-
-    @keyframes move {
-        0% {
-            top: 780px;
-        }
-
-        50% {
-            top: 800px;
-        }
-
-        100% {
-            top: 780px;
+ }
+ @media (max-width:1093px){
+    .itIsMe{
+        .profilbild{
+            display: none;
+            h1{
+                text-align: center;
+            }
         }
     }
-}
+    
+ }
+ @media (max-width: 1035px) {
+     .performance {
+         padding-left: 25px;
+         
+     }
+     .line-right {
+         min-width: 30px;
+     }
 
-.performance{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 35%;
-    padding-left: 200px;
-    font-size: 16px;
-    margin: 5px;
-    h1{
-        font-size: 90px;
-    }
-    .img{
-        height: 50px;
-        width: 50px;
-    }
-}
+ }
 
-.itIsMe{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .box{
-        display: flex;
-        gap: 30px;
-    }
-    .profilbild{
-        display: flex;
-        align-items: center;
-        img{
-            height: 400px;
-            width: 400px;
-            border: 3px solid rgba(112, 230, 28, 1);
-            border-radius: 50%;
-            z-index: 5;
-            // position: absolute;
-            // top: 1250px;
-            // right: 300px;
-
-        }
-
-
-    }
-}
-.purple{
-    position: absolute;
-    height: 800px;
-    width: 600px;
-    top: 900px;
-    right: 0px;
-}
-
-.line-right{
-    min-width: 300px;
-    padding-right: 0px;
-    border-bottom: 3px solid rgba(112, 230, 28, 1);
-    // position: absolute;
-    right: 0;
-    z-index: 2;
-}
+ @media (max-width: 800px) {
+     .itIsMe {
+         .profilbild {
+             display: none;
+         }
+         .performance{
+            width: 100%;
+            padding-right: 25px;
+         }
+     }
+     .mail{
+        display: none;
+     }
+ }

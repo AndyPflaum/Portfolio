@@ -11,7 +11,8 @@
     .andy {
         height: 750px;
         width: 600px;
-        
+        padding-left: 100px;
+
     }
 
     img {
@@ -27,6 +28,7 @@
         display: flex;
         align-items: center;
         padding-right: 100px;
+
         button {
             align-self: center;
             height: 60px;
@@ -52,18 +54,19 @@
         height: 0px;
         display: block;
         animation: test 1s ease-in-out;
+        position: relative;
 
         @keyframes test {
             0% {
-                left: 900px;
+                left: 100%;
             }
 
             80% {
-                left: -210px;
+                left: -10%;
             }
 
             100% {
-                left: -160px;
+                left: 0%;
             }
         }
     }
@@ -74,18 +77,19 @@
         align-items: center;
         font-size: 40px;
         animation: front 1s ease-in-out;
+        position: relative;
 
         @keyframes front {
             0% {
-                top: -800px;
+                top: -100%;
             }
 
             80% {
-                top: 50px;
+                top: 10%
             }
 
             100% {
-                top: 0px;
+                top: 0%;
             }
         }
 
@@ -100,32 +104,109 @@
 }
 
 @media(max-width:1330px) {
-    .iAndInfo{
+    .iAndInfo {
         justify-content: space-between;
-        .frontend{
+
+        .frontend {
             align-items: flex-start;
-            .name{
+
+            .name {
                 font-size: 45px;
             }
         }
-        .you{
-            button{
+
+        .you {
+            button {
                 margin-left: 140px;
             }
         }
-        
+
     }
 }
-@media(max-width:1180px){
-.iAndInfo{
-    flex-direction: column;
-    height: 110vh;
-    .andy{
-        left: 300px;    
-    }
-    .you{
-        justify-content: center;
-        
+
+@media(max-width:1180px) {
+    .iAndInfo {
+        flex-direction: column;
+        height: 70vh;
+
+        .andy {
+            left: 200px;
+            height: 440px;
+            width: 350px;
+        }
+
+        .you {
+            justify-content: center;
+
+        }
     }
 }
+
+@media(max-width:850px) {
+    .iAndInfo {
+        .andy {
+            left: 100px;
+        }
+
+        img {
+            height: 645px;
+            width: 575px;
+        }
+    }
+
+}
+
+@media(max-width:800px) {
+    .iAndInfo {
+        font-size: 32px;
+        border-bottom-right-radius: 60%;
+
+        img {
+            height: 530px;
+            width: 420px;
+        }
+
+        .andy {
+            left: 0px;
+        }
+
+        .frontend {
+            font-size: 29px;
+        }
+    }
+}
+
+@media(max-width:560px) {
+    .iAndInfo {
+        .you {
+            flex-direction: column;
+            padding-right: 0px;
+
+            .frontend {
+                text-align: center;
+            }
+        }
+
+        .iAm {
+            transform: none;
+            height: 32px;
+        }
+
+    }
+}
+
+@media(max-width:467px) {
+    .iAndInfo {
+        height: 80vh;
+
+        .andy {
+            padding-left: 0;
+            height: 420px;
+            width: 322px;
+        }
+
+        img {
+            width: 320px;
+        }
+    }
 }

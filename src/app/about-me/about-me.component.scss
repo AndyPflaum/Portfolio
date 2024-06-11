@@ -183,6 +183,12 @@
  }
 
  @media (max-width: 800px) {
+    .scroll{
+        display: none;
+    }
+    .purple{
+        width: 380px;
+     }
      .itIsMe {
          .profilbild {
              display: none;
@@ -191,8 +197,10 @@
             width: 100%;
             padding-right: 25px;
          }
+        
      }
      .mail{
         display: none;
      }
+    
  }

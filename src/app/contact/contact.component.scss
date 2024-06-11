@@ -107,3 +107,26 @@
 
     }
 }
+@media(max-width:620px){
+    .container{
+        .goUp {
+            top: 865px;
+        }
+    }
+    
+}
+
+@media(max-width:513px){
+    .contact{
+        h1{
+            padding-left: 30px;
+        }
+        
+    }
+    .container{
+        .goUp {
+            top: 1060px;
+        }
+    }
+    
+}

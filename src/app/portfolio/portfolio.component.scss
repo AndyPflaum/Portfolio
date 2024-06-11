@@ -112,13 +112,21 @@ section{
         top: 800px;
     }
 }
-@media(max-width:610px){
+@media(max-width:640px){
     .projects{
         padding: 0px 25px;
         img{
             width: 350px;
             height: 350px;
             padding: 0px;
+        }
+    }
+}
+@media(max-width:460px){
+    .projects{
+        img{
+            width: 300px;
+            height: 300px;
         }
     }
 }

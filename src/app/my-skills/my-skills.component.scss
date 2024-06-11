@@ -88,5 +88,43 @@
 
         .mySkills {}
     }
+}
+@media (max-width:750px) {
+    .skill {
+        
+        .mySkills {
+            width: 340px;
+            
 
+        }
+        .wrap {
+            width: 368px;
+            img{
+                width: 70px;
+                &:hover{
+                    width: 70px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media(max-width:420px){
+    .skill{
+        padding: 0px 0px;
+        .wrap{
+            width: 235px;
+            &:hover{
+                width: 245px;
+            }
+            img{
+                height: 70px;
+            }
+        }
+        .mySkills{
+            width: 330px;
+        }
+        
+    }
 }

@@ -8,11 +8,13 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { MenuComponent } from './header/menu/menu.component';
+import { MainComponent } from './main/main.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,IntroduceComponent,AppComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, ImpressumComponent],
+  imports: [RouterOutlet,HeaderComponent,IntroduceComponent,AppComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, ImpressumComponent,MenuComponent,MainComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

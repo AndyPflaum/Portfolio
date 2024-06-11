@@ -4,6 +4,13 @@
     <div class="links">
         <a href="#aboutMe">Über mich</a><a href="#skills"> Skills</a><a href="#portfolio">Portfolio</a>
     </div>
-    <img src="assets/img/burger menu.png" alt="">
+    <img (click)="toggleMenu()" src="assets/img/burger menu.png" alt="">
 </div>
+<!-- <app-menu [ngClass]="{ 'app-menu': isMenuVisible }"></app-menu> -->
 
+<div [ngClass]="{ 'app-menu': isMenuVisible }" class="menu">
+    <a href="#aboutMe">Über mich</a>
+    <a href="#skills"> Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Kontakt</a>
+</div>

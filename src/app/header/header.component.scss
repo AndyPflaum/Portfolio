@@ -37,6 +37,7 @@
     }
 }
 
+
 @media (max-width: 1035px) {
     .header {
         padding: 37px 25px;
@@ -57,3 +58,10 @@
     }
 
 }
+
+.show-menu {
+    display: flex;
+  }
+  app-menu {
+    display: none;
+  }

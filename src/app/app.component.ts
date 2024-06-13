@@ -8,16 +8,18 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
-import { MenuComponent } from './header/menu/menu.component';
 import { MainComponent } from './main/main.component';
+import { MenuComponent } from './header/menu/menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,IntroduceComponent,AppComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, ImpressumComponent,MenuComponent,MainComponent],
+  imports: [RouterOutlet, HeaderComponent, IntroduceComponent, AppComponent, AboutMeComponent, MySkillsComponent,
+    PortfolioComponent, ContactComponent, FooterComponent, ImpressumComponent, MainComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Andreas Pflaum';
+
 }

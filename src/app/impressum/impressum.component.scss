@@ -1,12 +1,12 @@
 
     .all{
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .impressum{
         margin-top: 100px;
-        height: auto;
+        // height: auto;
         max-width: 100%;
         display: flex;
         flex-direction: column;

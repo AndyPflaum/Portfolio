@@ -9,8 +9,8 @@
     height: 80vh;
 
     .andy {
-        height: 750px;
-        width: 600px;
+        height: 925px;
+        width: auto;
         padding-left: 100px;
 
     }
@@ -132,8 +132,8 @@
 
         .andy {
             left: 200px;
-            height: 440px;
-            width: 350px;
+            height: 650px;
+            width: auto;
         }
 
         .you {
@@ -173,6 +173,13 @@
 
         .frontend {
             font-size: 29px;
+        }
+    }
+}
+@media(max-width:611px){
+    .iAndInfo{
+        .andy{
+height: 455px;
         }
     }
 }

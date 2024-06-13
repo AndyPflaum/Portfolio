@@ -10,10 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  isMenuVisible = true;
-
-  toggleMenu() {
-    this.isMenuVisible = !this.isMenuVisible;
-    console.log(this.isMenuVisible); // Debugging
-  }
+  
 }

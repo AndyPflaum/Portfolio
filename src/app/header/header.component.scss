@@ -5,7 +5,7 @@
     height: 80px;
     gap: 0px;
     opacity: 0px;
-    padding: 37px 200px;
+    padding: 37px 100px;
     background-color:
         rgba(20, 29, 47, 1);
         img{
@@ -35,6 +35,10 @@
             color: linear;
         }
     }
+    .menu{
+        position: absolute;
+        right: 30px;
+    }
 }
 
 
@@ -42,26 +46,17 @@
     .header {
         padding: 37px 25px;
     }
-
 }
 
 @media (max-width: 800px) {
     .links{
         display: none;
     }
-
 }
 
 @media (min-width: 800px){
     img{
         display: none;
+        
     }
-
 }
-
-.show-menu {
-    display: flex;
-  }
-  app-menu {
-    display: none;
-  }

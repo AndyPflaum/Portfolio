@@ -15,10 +15,13 @@
             </span>
         </div>
         <div class="mail"> 
-            <form onsubmit="">
-                <input type="text" placeholder=" Your name">
-                <input type="email" placeholder=" Your email">
-                <textarea class="big-input" placeholder="Your message"></textarea>
+            <form (ngSubmit)="onsubmit(contactForm)" #contactForm="ngForm">
+                <input [(ngModel)]="contactData.name" name="name" type="text" placeholder=" Your name" required>
+                <input [(ngModel)]="contactData.email" name="email" type="email" placeholder=" Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" class="big-input" placeholder="Your message" required></textarea>
+                @if (!message.valid && message.touched) {
+                    <span>Fülle bitte alle Felder aus!</span>
+                }
                 <button>Senden</button>
             </form>
         </div>

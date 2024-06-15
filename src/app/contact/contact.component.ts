@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component,inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -14,22 +14,16 @@ export class ContactComponent {
 
   http = inject(HttpClient);
 
-  contactData ={
-    name:'',
+  contactData = {
+    name: '',
     email: '',
     message: ''
-  }
-  onsubmit(ngForm:NgForm){
-    if (ngForm.valid && ngForm.submitted) {
-      console.log(this.contactData);
-    }
-    
   }
 
   mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'http://andreas-pflaum.com/portfolio/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -40,7 +34,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+    if (ngForm.submitted && ngForm.form.valid ) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -52,6 +46,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } 
+    }
   }
 }

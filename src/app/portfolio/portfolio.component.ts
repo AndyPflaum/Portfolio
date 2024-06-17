@@ -15,7 +15,7 @@ export class PortfolioComponent {
     'El Pollo Loco'
   ]
   languages = [
-    'Angular | TypeScript | HTML | CSS ',
+    'Angular | TypeScript | HTML | CSS | Firebase',
     'JavaScript | HTML | CSS'
   ]
   text = [

@@ -19,7 +19,7 @@ export class ContactComponent {
     email: '',
     message: ''
   }
-
+  submitSuccess = false;
   mailTest = false;
 
   post = {
@@ -38,13 +38,14 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            this.submitSuccess = true;
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
+          
         });
     }
   }

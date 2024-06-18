@@ -6,5 +6,5 @@ import { MenuComponent } from './header/menu/menu.component';
 export const routes: Routes = [
     { path: '', component: MainComponent },
     { path: 'imprint', component: ImpressumComponent },
-    { path: 'menü', component: MenuComponent }
+    { path: 'menü', component: MenuComponent },
 ];

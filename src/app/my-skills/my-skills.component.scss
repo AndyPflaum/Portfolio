@@ -6,7 +6,7 @@
     gap: 60px;
     margin-top: 100px;
     position: relative;
-    
+
 
 
     .wrap {
@@ -61,7 +61,7 @@
         border-radius: 15px;
         transition: all 0.3s ease-in-out;
         margin-top: 40px;
-        
+
 
         &:hover {
             background-color: #9747FF;
@@ -92,42 +92,61 @@
         .mySkills {}
     }
 }
+
 @media (max-width:750px) {
     .skill {
-        
+
         .mySkills {
             width: 340px;
-            
+
 
         }
+
         .wrap {
             width: 368px;
-            img{
+
+            img {
                 width: 70px;
-                &:hover{
+
+                &:hover {
                     width: 70px;
                 }
             }
-            
+
         }
     }
 }
 
-@media(max-width:420px){
-    .skill{
+@media(max-width:420px) {
+    .skill {
         padding: 0px 0px;
-        .wrap{
+
+        .wrap {
             width: 235px;
-            &:hover{
+
+            &:hover {
                 width: 245px;
             }
-            img{
+
+            img {
                 height: 70px;
             }
         }
-        .mySkills{
+
+        .mySkills {
             width: 330px;
         }
-        
     }
+}
+
+@media(max-width:420px) {
+    .skill {
+        .mySkills {
+            width: 250px;
+            img{
+                height: 800px;
+            }
+        }
+    }
+
 }

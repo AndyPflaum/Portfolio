@@ -4,7 +4,7 @@
         <h1>Kontakt</h1>
     </div>
 
-    <div id="contact" class="container">
+    <div class="container">
         <div>
             <h3>Interesse geweckt?</h3>
             <span>Nutzen Sie gerne dieses Formular, um mit mir in Kontakt zu treten. Ich bin gespannt darauf, von Ihnen
@@ -22,9 +22,12 @@
                 @if (!message.valid && message.touched) {
                     <span>Fülle bitte alle Felder aus!</span>
                 }
-                <button>Senden</button>
+                <div class="checkbox"><input (click)="toggleCheckbox()" type="checkbox"><a href="imprint">Datenschutzerklärung</a></div>
+                
+                
+                <button type="submit" [disabled]="!isChecked" [ngClass]="{ 'enabled-button': isChecked, 'disabled-button': !isChecked }">Senden</button>
                 @if (submitSuccess) {
-                    <span>Senden erfolgreich!</span>
+                    <span>ERFOLGREICH GESENDET!</span>
                 }
             </form>
         </div>

@@ -21,9 +21,10 @@ export class ContactComponent {
   }
   submitSuccess = false;
   mailTest = false;
+  isChecked = false;
 
   post = {
-    endPoint: 'http://andreas-pflaum.com/portfolio/sendMail.php',
+    endPoint: 'https://andreas-pflaum.com/portfolio/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -40,13 +41,21 @@ export class ContactComponent {
           next: (response) => {
             this.submitSuccess = true;
             ngForm.resetForm();
+            
+            setTimeout(() => {
+              this.submitSuccess = false;
+            }, 3000);
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
+        
           
         });
     }
+  }
+  toggleCheckbox() {
+    this.isChecked = !this.isChecked; // Umkehrung des aktuellen Zustands
   }
 }

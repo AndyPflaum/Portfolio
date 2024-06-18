@@ -109,19 +109,11 @@
         justify-content: space-between;
 
         .frontend {
-            align-items: flex-start;
 
             .name {
                 font-size: 45px;
             }
         }
-
-        .you {
-            button {
-                margin-left: 140px;
-            }
-        }
-
     }
 }
 
@@ -191,12 +183,10 @@
         .you {
             flex-direction: column;
             padding-right: 0px;
-
             .frontend {
                 text-align: center;
             }
         }
-
         .iAm {
             transform: none;
             height: 32px;
@@ -212,9 +202,40 @@
             height: 420px;
             width: 322px;
         }
-
         img {
             width: 320px;
+        }
+    }
+}
+
+@media(max-width:350px) {
+    .iAndInfo {
+        .frontend {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            .name {
+                font-size: 35px;
+            }
+        }
+
+        img {
+            height: 290px;
+            width: auto;
+        }
+
+        .andy {
+            height: 390px;
+            width: auto;
+        }
+
+        .you {
+            padding-right: 0px;
+            padding-left: 23px;
+
+            button {
+                margin: 0;
+            }
         }
     }
 }

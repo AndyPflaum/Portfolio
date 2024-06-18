@@ -20,6 +20,28 @@
     align-items: flex-start;
     gap: 200px;
     position: relative;
+    .checkbox{
+        display: flex;
+        width: 260px;
+        
+        p{
+            font-size: 18px;
+            text-underline-offset: inherit;
+        }
+        input{
+            height: 30px;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: underline;
+            color: white;
+            font-size: 18px;
+            &:hover{
+                color: rgb(236, 99, 99);
+            }
+        }
+        
+    }
 
     h3 {
         font-size: 32px;
@@ -39,6 +61,7 @@
             font-size: 32px;
             text-align: center;
         }
+        
     }
 
     input {
@@ -66,7 +89,14 @@
         width: 253px;
         border-radius: 10px;
         color: white;
-        background-color: rgba(133, 132, 132, 0.522);
+        cursor: not-allowed;
+        &.enabled-button {
+            background-color: rgba(112, 230, 28, 1);
+            cursor: pointer;
+          }
+          &.disabled-button {
+            background-color: gray; // Color when disabled
+          }
     }
 
     img {
@@ -142,4 +172,17 @@
             top: 1120px;
         }
     }
+}
+@media(max-width:350px){
+.container{
+    .mail{
+        input{
+            width: 200px;
+        }
+        textarea{
+            width: 200px;
+        }
+        
+    }
+}
 }

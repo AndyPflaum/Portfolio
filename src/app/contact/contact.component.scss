@@ -1,11 +1,19 @@
+.section {
+    position: relative;
+    max-width: 1990px;
+    margin: 0px auto;
+}
+
 .contact {
     display: flex;
     align-items: center;
+
 
     .line {
         width: 100px;
         border-bottom: 3px solid rgb(112, 230, 28);
         margin: 80px 0;
+        position: absolute;
     }
 
     h1 {
@@ -13,34 +21,50 @@
     }
 }
 
+a {
+    img {
+        position: absolute;
+        right: 50px;
+        bottom: 30px;
+    }
+}
+
+
 .container {
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 0px 200px;
+    max-width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 200px;
-    position: relative;
-    .checkbox{
+    gap: 50px;
+
+    .interest {
+        width: 50%;
+    }
+
+    .checkbox {
         display: flex;
         width: 260px;
-        
-        p{
+
+        p {
             font-size: 18px;
             text-underline-offset: inherit;
         }
-        input{
+
+        input {
             height: 30px;
             cursor: pointer;
         }
-        a{
+
+        a {
             text-decoration: underline;
             color: white;
             font-size: 18px;
-            &:hover{
-                color: rgb(236, 99, 99);
+
+            &:hover {
+                color: rgba(151, 71, 255, 1);
             }
         }
-        
+
     }
 
     h3 {
@@ -53,34 +77,43 @@
             flex-direction: column;
             align-items: center;
             gap: 30px;
-            /* Platz zwischen den Elementen */
+            position: relative;
+            z-index: 2;
+
+
+
         }
-        span{
+
+        span {
             color: red;
             font: bold;
-            font-size: 32px;
+            font-size: 20px;
             text-align: center;
         }
-        
+
     }
 
     input {
-        width: 617px;
+        width: 450px;
         height: 50px;
         border-radius: 10px;
         border: 2px solid rgba(151, 71, 255, 1);
         background-color: transparent;
         color: white;
+        font-size: 20px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
     }
 
     textarea.big-input {
         height: 202px;
-        width: 617px;
+        width: 450px;
         border-radius: 10px;
         border: 2px solid rgba(151, 71, 255, 1);
         background-color: transparent;
         color: white;
+        font-size: 20px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
     }
 
@@ -90,26 +123,27 @@
         border-radius: 10px;
         color: white;
         cursor: not-allowed;
+
         &.enabled-button {
             background-color: rgba(112, 230, 28, 1);
             cursor: pointer;
-          }
-          &.disabled-button {
+        }
+
+        &.disabled-button {
             background-color: gray; // Color when disabled
-          }
+        }
     }
 
     img {
         position: absolute;
-        top: -480px;
         right: 0;
+        bottom: 0px;
         z-index: -1;
     }
 
     .goUp {
         position: absolute;
-        right: 150px;
-        top: 500px;
+        right: 50px;
         cursor: pointer;
         z-index: 5;
     }
@@ -126,63 +160,34 @@
     .container {
         flex-direction: column;
         align-items: center;
-        padding: 0px 100px;
+        padding: 0px;
         gap: 100px;
-        .mail{
-            input{
+
+        .mail {
+            input {
                 width: 320px;
             }
-            textarea{
+
+            textarea {
                 width: 320px;
             }
         }
 
-        .goUp {
-            top: 800px;
-        }
-
     }
-}
-@media(max-width:620px){
-    .container{
-        .goUp {
-            top: 865px;
-        }
-    }
-    
 }
 
-@media(max-width:513px){
-    .contact{
-        h1{
-            padding-left: 30px;
-        }
-        
-    }
-    .container{
-        .goUp {
-            top: 1060px;
-        }
-    }
-    
-}
-@media(max-width:392px){
-    .container{
-        .goUp {
-            top: 1120px;
+
+@media(max-width:350px) {
+    .container {
+        .mail {
+            input {
+                width: 200px;
+            }
+
+            textarea {
+                width: 200px;
+            }
+
         }
     }
-}
-@media(max-width:350px){
-.container{
-    .mail{
-        input{
-            width: 200px;
-        }
-        textarea{
-            width: 200px;
-        }
-        
-    }
-}
 }

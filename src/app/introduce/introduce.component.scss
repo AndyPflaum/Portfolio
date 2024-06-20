@@ -7,11 +7,15 @@
     z-index: 3;
     background-color: rgba(20, 29, 47, 1);
     height: 100vh;
+    max-width: 1990px;
+    margin: 0px auto;
+    
 
     .andy {
         height: 925px;
         width: auto;
         padding-left: 100px;
+        transition: all 0.3s ease-in-out;
 
     }
 
@@ -21,6 +25,7 @@
         position: absolute;
         left: 0px;
         z-index: -1;
+        transition: all 0.3s ease-in-out;
 
     }
 
@@ -28,6 +33,8 @@
         display: flex;
         align-items: center;
         padding-right: 100px;
+        position: relative;
+        // transition: all 0.3s ease-in-out;
 
         button {
             align-self: center;
@@ -39,6 +46,10 @@
             border-radius: 15px;
             transition: all 0.3s ease-in-out;
             margin-top: 40px;
+            position: absolute;
+            top: 50px;
+            transform: translateX(-50%);
+            border: none;
 
             &:hover {
                 background-color: #9747FF;
@@ -46,6 +57,7 @@
                 width: 160px;
                 cursor: pointer;
             }
+
         }
     }
 
@@ -53,10 +65,10 @@
         transform: rotate(270deg);
         height: 0px;
         display: block;
-        animation: test 1s ease-in-out;
+        animation: text 1s ease-in-out;
         position: relative;
 
-        @keyframes test {
+        @keyframes text {
             0% {
                 left: 100%;
             }
@@ -79,6 +91,7 @@
         animation: front 1s ease-in-out;
         position: relative;
         gap: 20px;
+        margin-bottom: 50px;
 
         @keyframes front {
             0% {
@@ -234,7 +247,7 @@
             padding-left: 23px;
 
             button {
-                margin: 0;
+                margin-top: 55px;
             }
         }
     }

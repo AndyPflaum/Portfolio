@@ -1,11 +1,11 @@
-<section>
-    <div class="contact">
+<section class="section" >
+    <div class="contact"data-aos="fade-left">
         <div class="line"></div>
         <h1>Kontakt</h1>
     </div>
 
-    <div class="container">
-        <div>
+    <div class="container" >
+        <div class="interest"data-aos="fade-left">
             <h3>Interesse geweckt?</h3>
             <span>Nutzen Sie gerne dieses Formular, um mit mir in Kontakt zu treten. Ich bin gespannt darauf, von Ihnen
                 zu hören, Ihre Ideen kennenzulernen und durch meine Arbeit zu Ihren Projekten beizutragen.</span> <br>
@@ -14,26 +14,46 @@
                 Suchen Sie einen Fontend Developer? <b>Kontaktieren Sie mich!</b>
             </span>
         </div>
-        <div class="mail"> 
-            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <input [(ngModel)]="contactData.name" name="name" type="text" placeholder=" Your name" required>
-                <input [(ngModel)]="contactData.email" name="email" type="email" placeholder=" Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" class="big-input" placeholder="Your message" required></textarea>
+        <div class="mail" data-aos="fade-right">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
+
+                <input [(ngModel)]="contactData.name" minlength="3" name="name" type="text" placeholder=" Your name"
+                    required #name="ngModel">
+                @if (name.invalid && name.touched) {
+                <span>Bitte ein Namen angeben!</span>
+                }
+                <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="Your email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" #mail="ngModel"
+                    [ngClass]="{'invalidForm': mail.invalid && mail.touched}">
+
+                @if (mail.invalid && mail.touched) {
+                <span class="warning">Bitte geben Sie eine E-mail-Adresse ein!</span>
+                }
+                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message"
+                    class="big-input" placeholder="Your message" required></textarea>
                 @if (!message.valid && message.touched) {
-                    <span>Fülle bitte alle Felder aus!</span>
+                <span>Fülle bitte alle Felder aus!</span>
                 }
-                <div class="checkbox"><input (click)="toggleCheckbox()" type="checkbox"><a href="imprint">Datenschutzerklärung</a></div>
+                <div class="checkbox"><input (click)="toggleCheckbox()" type="checkbox"><a
+                        href="imprint">Datenschutzerklärung</a></div>
+
+                @if (name.valid && mail.valid && message.valid) {
+                    <button type="submit" [disabled]="!isChecked"
+                    [ngClass]="{ 'enabled-button': isChecked, 'disabled-button': !isChecked }">Senden</button>
+                }
                 
-                
-                <button type="submit" [disabled]="!isChecked" [ngClass]="{ 'enabled-button': isChecked, 'disabled-button': !isChecked }">Senden</button>
                 @if (submitSuccess) {
-                    <span>ERFOLGREICH GESENDET!</span>
+                <span>ERFOLGREICH GESENDET!</span>
                 }
+                
             </form>
+
         </div>
         <img src="assets/img/greenShadow2(1).png" alt="">
-         <a href="#header"><img class="goUp" src="assets/img/goUpButton.png" alt=""></a>
-        
+
+
     </div>
+    <a href="#header"><img class="goUp" src="assets/img/goUpButton.png" alt=""></a>
+
     <div class="end-line"></div>
 </section>

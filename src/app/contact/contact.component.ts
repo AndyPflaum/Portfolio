@@ -11,6 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  
 
   http = inject(HttpClient);
 
@@ -56,6 +57,6 @@ export class ContactComponent {
     }
   }
   toggleCheckbox() {
-    this.isChecked = !this.isChecked; // Umkehrung des aktuellen Zustands
+    this.isChecked = !this.isChecked; 
   }
 }

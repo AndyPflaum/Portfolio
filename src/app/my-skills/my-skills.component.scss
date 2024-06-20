@@ -1,29 +1,33 @@
 .skill {
     display: flex;
     justify-content: space-between;
-    padding-left: 200px;
-    padding-right: 200px;
     gap: 60px;
     margin-top: 100px;
     position: relative;
-
-
+    max-width: 1990px;
+    margin: 0px auto;
 
     .wrap {
         display: flex;
         flex-wrap: wrap;
-        width: 600px;
-        gap: 60px;
+        width: 40%;
+        height: auto;
+        gap: 150px;
+        padding-left: 200px;
         margin-top: 50px;
+        margin-bottom: 50px;
         z-index: 6;
 
         img {
             height: 100px;
             transition: all 150ms ease-in-out;
             cursor: pointer;
+            position: absolute;
+
 
             &:hover {
-                height: 150px;
+                height: 110px;
+
             }
         }
     }
@@ -35,6 +39,9 @@
         justify-content: center;
         height: 500px;
         width: 685px;
+        max-width: 1990px;
+        padding-right: 200px;
+        
 
         span {
             text-align: center;
@@ -61,6 +68,10 @@
         border-radius: 15px;
         transition: all 0.3s ease-in-out;
         margin-top: 40px;
+        border: none;
+        position: absolute;
+        transform: translateX(-50%);
+
 
 
         &:hover {
@@ -68,6 +79,7 @@
             height: 70px;
             width: 160px;
             cursor: pointer;
+
         }
     }
 
@@ -80,16 +92,36 @@
         }
     }
 }
-
+@media(max-width:1281){
+    .skill{
+        .wrap{
+            padding: 0px 100px;
+        }
+    }
+    
+}
 @media (max-width:1093px) {
     .skill {
         flex-direction: column-reverse;
         align-items: center;
         margin-top: 0px;
+        padding: 0px 100px;
         gap: 0px;
-        //  padding: 0px 100px;
 
-        .mySkills {}
+        //  padding: 0px 100px;
+        .wrap {
+            width: auto;
+            padding: 0px 25px;
+        }
+        .mySkills{
+            padding: 0px 25px;
+        }
+
+    }
+}
+@media (max-width: 800px){
+    .skill{
+        padding: 0px 25px;
     }
 }
 
@@ -106,10 +138,11 @@
             width: 368px;
 
             img {
-                width: 70px;
+                height: 70px;
+                width: auto;
 
                 &:hover {
-                    width: 70px;
+                    height: 80px;
                 }
             }
 
@@ -123,14 +156,6 @@
 
         .wrap {
             width: 235px;
-
-            &:hover {
-                width: 245px;
-            }
-
-            img {
-                height: 70px;
-            }
         }
 
         .mySkills {
@@ -143,7 +168,8 @@
     .skill {
         .mySkills {
             width: 250px;
-            img{
+
+            img {
                 height: 800px;
             }
         }

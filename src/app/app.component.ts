@@ -36,4 +36,5 @@ export class AppComponent implements OnInit {
       });
     }
   }
+  german = true;
 }

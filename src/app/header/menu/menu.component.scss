@@ -12,6 +12,7 @@
   top: 140px;
   max-width: 1990px;
   margin: 0px auto;
+  z-index: 999;
 
   a {
     color: white;
@@ -19,6 +20,7 @@
 
     &:hover {
       text-decoration: underline;
+      color: #70E61C;
     }
   }
 }
@@ -29,4 +31,7 @@
   top: 30px;
   right: 30px;
   font-size: 32px;
+  &:hover{
+    color: rgba(151, 71, 255, 1);
+  }
 }

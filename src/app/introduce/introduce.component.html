@@ -1,16 +1,45 @@
- <div class="iAndInfo">
-    <div>
-        <img src="assets/img/photoShadows.png">
-        <img class="andy" src="assets/img/andy.png" alt="">
+<section>
+    <div class="header" id="I">
+        <app-header></app-header>
     </div>
-    
-    <div class="you">
-        <div class="iAm">Ich bin</div>
-        <div class="frontend">
-            <span class="name"><b>Andreas Pflaum</b></span>
-            <span class="frontendDeveloper">FRONTEND DEVELOPER</span>
-            <a href="#contact"><button>Kontakt</button></a>
+
+    <div class="iAndInfo">
+
+        <div class="picture">
+
+            <img class="andy" src="assets/img/andy.png" alt="">
         </div>
 
+        <div class="you">
+            @if (ls.german) {
+                <div class="iAm">Ich bin</div>    
+            }@else {
+                <div class="iAm">I am</div> 
+            }
+            <div class="frontend">
+                <div class="two">
+                    <h1><b>Andreas Pflaum</b> </h1>
+                    <span class="frontendDeveloper">FRONTEND DEVELOPER</span>
+                </div>
+                @if (ls.german){
+                    <a href="#contact"><button>Kontakt</button></a>
+                }@else {
+                    <a href="#contact"><button>Let’s talk!</button></a>
+                }
+                
+            </div>
+
+        </div>
     </div>
-</div>
+    <div class="about-me" data-aos="fade-left">
+        <div class="line"></div>
+        <a href="https://github.com/AndyPflaum" target="_blank"><img src="assets/img/vector(1).png" alt=""></a>
+        <a href="#contact"><img src="assets/img/vector(2).png" alt=""></a>
+        <a href="https://www.linkedin.com/in/andreas-pflaum-211548284/" target="_blank"><img
+                src="assets/img/vector(3).png" alt=""></a>
+        <a class="mail" href="#contact">andyreas.pa&#64;gmail.com</a>
+
+    </div>
+    <div class="linetest"></div>
+</section>
+<img class="hintergrund" src="assets/img/photoShadows.png">

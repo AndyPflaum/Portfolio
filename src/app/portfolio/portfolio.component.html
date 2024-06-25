@@ -7,19 +7,30 @@
         <div class="line-purpel"></div>
     </div>
     <div class="projects" *ngFor="let name of names;let i = index"
-        [ngClass]="{'row': i % 2 === 0, 'row-reverse': i % 2 !== 0}" [attr.data-aos]="i % 2 === 0 ? 'fade-left' : 'fade-right'" class="projects">
+        [ngClass]="{'row': i % 2 === 0, 'row-reverse': i % 2 !== 0}"
+        [attr.data-aos]="i % 2 === 0 ? 'fade-left' : 'fade-right'" class="projects">
+
         <div><img src="{{images[i]}}" alt=""></div>
         <div>
             <h3>{{names[i]}}</h3>
             <div class="languages">{{languages[i]}}</div>
             <div>
+                @if (ls.german) {
                 <span>{{text[i]}}</span>
+                }@else {
+                <span>{{englishText[i]}}</span>
+                }
             </div>
             <div class="buttons">
-                <a href="{{pages[i]}}" target="_blank"><button class="button">Live-Test</button></a>
-                <a href="{{githubs[i]}}" target="_blank"><button class="button-two">Github</button></a>
+                <a href="{{pages[i]}}" target="_blank">
+                    <button class="button">Live-Test</button></a>
+                <a href="{{githubs[i]}}" target="_blank">
+                    <button class="button-two">Github</button></a>
             </div>
+
         </div>
+
     </div>
-    <img class="purpleShadow" src="assets/img/purpleShadow3.png" alt="">
+
 </section>
+<img class="purpleShadow" src="assets/img/purpleShadow3.png" alt="">

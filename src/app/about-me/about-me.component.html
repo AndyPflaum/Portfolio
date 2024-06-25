@@ -1,18 +1,17 @@
 <section class="section">
-    <div class="about-me" data-aos="fade-left">
-        <div class="line"></div>
-        <a href="https://github.com/AndyPflaum" target="_blank"><img src="assets/img/vector(1).png" alt=""></a>
-        <a href="#contact"><img src="assets/img/vector(2).png" alt=""></a>
-        <a href="https://www.linkedin.com/in/andreas-pflaum-211548284/" target="_blank"><img src="assets/img/vector(3).png" alt=""></a>
-        <a class="mail" href="#contact">andyreas.pa&#64;gmail.com</a>
 
-    </div>
     <div class="scroll">
+        @if (ls.german) {
         <a href="#aboutMe"><span>Runterscrollen &rarr;</span></a>
+        }@else {
+        <a href="#aboutMe"><span>Scroll down &rarr;</span></a>
+        }
+
     </div>
 
     <div class="itIsMe">
         <div class="performance" data-aos="fade-left">
+            @if (ls.german) {
             <h1> Über mich</h1>
             <span>Hallo und willkommen auf meiner Website! Ich bin ein Frontend-Entwickler mit Wohnsitz in Merenberg,
                 Deutschland. Ich liebe es, Probleme zu lösen und neue Herausforderungen anzunehmen. Ich freue mich sehr,
@@ -38,6 +37,33 @@
                     und ständig neue Technologien zu erlernen, ist unglaublich bereichernd.
                 </div>
             </div>
+            }@else {
+            <h1>About Me</h1>
+            <span>Hello and welcome to my website! I am a frontend developer based in Merenberg, Germany. I love solving
+                problems and taking on new challenges. I am very happy that you have found your way here.
+            </span>
+            <div class="box">
+                <div>
+                    <img src="assets/img/bulbDesktop.png" alt="">
+                </div>
+                <div>
+                    In implementing innovative ideas, I look forward to collaborating with designers and backend
+                    developers. My passion for programming motivates me to stay informed about the latest industry
+                    trends and to continuously develop my skills.
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <img src="assets/img/puzzleDesktop.png" alt="">
+                </div>
+                <div>
+                    Programming holds a special place in my heart because it allows me to turn ideas into reality. The
+                    ability to create something from nothing, solve complex problems, and constantly learn new
+                    technologies is incredibly rewarding.
+                </div>
+            </div>
+
+            }
 
         </div>
         <div class="profilbild" data-aos="fade-right">
@@ -49,5 +75,6 @@
         </div>
 
     </div>
-    <img class="purple" src="assets/img/purpleShadow2.png" alt="">
+
 </section>
+<img class="purple" src="assets/img/purpleShadow2.png" alt="">

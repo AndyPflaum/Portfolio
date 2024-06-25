@@ -2,10 +2,34 @@
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    margin-top: 100px;
-    position: relative;
     max-width: 1990px;
     margin: 0px auto;
+    margin-top: 50px;
+
+    @media (max-width:1093px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 0px;
+        padding: 0px 100px;
+        gap: 0px;
+    }
+
+    @media (max-width: 800px) {
+        padding: 0px 25px;
+    }
+
+    @media(max-width:420px) {
+        padding: 0px 0px;
+    }
+
+    h1 {
+        padding: 40px 0px;
+
+        @media (max-width:1425px) {
+            text-align: center;
+        }
+    }
+
 
     .wrap {
         display: flex;
@@ -18,15 +42,39 @@
         margin-bottom: 50px;
         z-index: 6;
 
+        @media(max-width:1281) {
+            padding: 0px 100px;
+        }
+
+        @media (max-width:1093px) {
+            width: auto;
+            padding: 0px 25px;
+        }
+
+        @media (max-width:750px) {
+            width: 368px;
+        }
+
+        @media(max-width:420px) {
+            width: 235px;
+        }
+
         img {
             height: 100px;
             transition: all 150ms ease-in-out;
             cursor: pointer;
             position: absolute;
+                @media (max-width:750px) {
+                height: 70px;
+                width: auto;
 
+            }
 
             &:hover {
                 height: 110px;
+                @media (max-width:750px){
+                    height: 80px;
+                }
 
             }
         }
@@ -41,21 +89,26 @@
         width: 685px;
         max-width: 1990px;
         padding-right: 200px;
-        
+        margin-top: -110px;
+
+        @media (max-width:1093px) {
+            padding: 0px 25px;
+        }
+
+        @media (max-width:750px) {
+            width: 340px;
+        }
+
+        @media(max-width:420px) {
+            width: 330px;
+        }
 
         span {
             text-align: center;
+            @media(max-width:350px){
+                width: 300px;
+            }
         }
-    }
-
-    .grenn-shadow {
-
-        position: absolute;
-        top: 100px;
-        left: 0px;
-        z-index: -1;
-
-
     }
 
     button {
@@ -72,107 +125,24 @@
         position: absolute;
         transform: translateX(-50%);
 
-
-
         &:hover {
             background-color: #9747FF;
             height: 70px;
             width: 160px;
             cursor: pointer;
-
         }
     }
 
 }
 
-@media (max-width:1425px) {
-    .skill {
-        h1 {
-            text-align: center;
-        }
+.grenn-shadow {
+
+    position: absolute;
+    top: 1200px;
+    left: 0px;
+    z-index: -1;
+
+    @media(max-width: 800px) {
+        display: none;
     }
-}
-@media(max-width:1281){
-    .skill{
-        .wrap{
-            padding: 0px 100px;
-        }
-    }
-    
-}
-@media (max-width:1093px) {
-    .skill {
-        flex-direction: column-reverse;
-        align-items: center;
-        margin-top: 0px;
-        padding: 0px 100px;
-        gap: 0px;
-
-        //  padding: 0px 100px;
-        .wrap {
-            width: auto;
-            padding: 0px 25px;
-        }
-        .mySkills{
-            padding: 0px 25px;
-        }
-
-    }
-}
-@media (max-width: 800px){
-    .skill{
-        padding: 0px 25px;
-    }
-}
-
-@media (max-width:750px) {
-    .skill {
-
-        .mySkills {
-            width: 340px;
-
-
-        }
-
-        .wrap {
-            width: 368px;
-
-            img {
-                height: 70px;
-                width: auto;
-
-                &:hover {
-                    height: 80px;
-                }
-            }
-
-        }
-    }
-}
-
-@media(max-width:420px) {
-    .skill {
-        padding: 0px 0px;
-
-        .wrap {
-            width: 235px;
-        }
-
-        .mySkills {
-            width: 330px;
-        }
-    }
-}
-
-@media(max-width:420px) {
-    .skill {
-        .mySkills {
-            width: 250px;
-
-            img {
-                height: 800px;
-            }
-        }
-    }
-
 }

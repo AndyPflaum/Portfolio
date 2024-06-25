@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  
+  constructor(public ls:LanguageService){}
 
   http = inject(HttpClient);
 
@@ -20,9 +21,12 @@ export class ContactComponent {
     email: '',
     message: ''
   }
+
+
   submitSuccess = false;
   mailTest = false;
   isChecked = false;
+
 
   post = {
     endPoint: 'https://andreas-pflaum.com/portfolio/sendMail.php',
@@ -34,6 +38,7 @@ export class ContactComponent {
       },
     },
   };
+
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid ) {
@@ -56,6 +61,8 @@ export class ContactComponent {
         });
     }
   }
+
+  
   toggleCheckbox() {
     this.isChecked = !this.isChecked; 
   }

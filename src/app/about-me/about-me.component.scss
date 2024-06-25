@@ -1,53 +1,7 @@
 section {
     max-width: 1990px;
     margin: 0px auto;
-
-    .about-me {
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;
-        position: relative;
-        gap: 50px;
-
-        img {
-            transition: transform 0.5s ease-in-out;
-
-            &:hover {
-                cursor: pointer;
-                transform: rotate(360deg);
-            }
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-
-            &:hover {
-                cursor: pointer;
-            }
-
-
-        }
-
-        .line {
-            width: 100px;
-            border-bottom: 3px solid #9747FF;
-            margin: 80px 0;
-
-            img {
-                height: 30px;
-                width: 30px;
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-            }
-
-        }
-    }
-
+    margin-top: 200px;
     .scroll {
         transform: rotate(90deg);
         position: absolute;
@@ -57,6 +11,9 @@ section {
         cursor: pointer;
         animation: move 1s ease-in-out infinite;
         z-index: 99;
+        @media (max-width: 800px){
+            display: none;
+        }
 
         a {
             text-decoration: none;
@@ -86,9 +43,30 @@ section {
         padding-left: 200px;
         font-size: 16px;
         margin: 5px;
+        
+
+        @media (max-width: 1280px) {
+            width: 100%;
+            padding: 0px 100px;
+        }
+        @media (max-width: 800px){
+            width: 100%;
+            padding: 0px 25px;
+        }
+
+        
 
         h1 {
             font-size: 90px;
+            padding-bottom: 20px;
+
+            @media (max-width: 1280px) {
+                text-align: center;
+            }
+
+            @media (max-width:1093px) {
+                text-align: center;
+            }
         }
 
         .img {
@@ -112,6 +90,10 @@ section {
             display: flex;
             align-items: center;
 
+            @media(max-width:1280px) {
+                display: none;
+            }
+
             img {
                 height: 300px;
                 width: auto;
@@ -122,90 +104,36 @@ section {
         }
     }
 
-    .purple {
-        position: absolute;
-        height: 800px;
-        width: auto;
-        top: 900px;
-        right: 0px;
-        z-index: -1;
-    }
-
     .line-right {
-        width: 230px;
+        width: 50vw;
         padding-right: 0px;
         border-bottom: 3px solid rgba(112, 230, 28, 1);
         right: 0;
         z-index: 2;
-    }
+        position: relative;
+        margin-right: -37vw;
 
-    @media (max-width: 1280px) {
-        .itIsMe {
-            .profilbild {
-                .line-right {
-                    width: 95px;
-                }
-            }
-
-            .performance {
-                width: 100%;
-                padding: 0px 100px;
-
-                h1 {
-                    text-align: center;
-                }
-            }
-
+        @media (max-width: 1280px) {
+            width: 95px;
         }
-    }
-
-    @media (max-width:1093px) {
-        .itIsMe {
-            .profilbild {
-                display: none;
-
-                h1 {
-                    text-align: center;
-                }
-            }
-        }
-
-    }
-
-    @media (max-width: 1035px) {
-        .performance {
-            padding-left: 25px;
-
-        }
-
-        .line-right {}
-
     }
 
     @media (max-width: 800px) {
-        .scroll {
-            display: none;
-        }
-
-        .purple {
-            width: 380px;
-        }
-
-        .itIsMe {
-            .profilbild {
-                display: none;
-            }
-
-            .performance {
-                width: 100%;
-                padding: 0px 25px;
-            }
-
-        }
-
         .mail {
             display: none;
         }
 
+    }
+}
+
+.purple {
+    position: absolute;
+    height: 800px;
+    width: auto;
+    top: 1000px;
+    right: 0px;
+    z-index: -1;
+    @media (max-width: 800px){
+        width: 380px;
     }
 }

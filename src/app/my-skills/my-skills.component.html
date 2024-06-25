@@ -1,18 +1,28 @@
 <div class="skill">
-    <div class="wrap">
-        <div *ngFor="let image of images; let i = index" [attr.data-aos]="i % 2 === 0 ? 'fade-left' : 'fade-right'">
+    <div class="wrap" data-aos="fade-left">
+        <div *ngFor="let image of images; let i = index">
             <img class="itIsIcon" src="{{images[i]}}" alt="">
         </div>
     </div>
     <div class="mySkills">
-        <h1 data-aos="fade-left">Meine skills</h1>
-        <span  data-aos="fade-left">
+        @if (ls.german) {
+        <h1 data-aos="fade-right">Meine skills</h1>
+        <span data-aos="fade-right">
             Ich habe meine Fähigkeiten in der Frontend-Entwicklung ausgebaut, wodurch ich verschiedene reale Projekte
             umsetzen konnte.
         </span>
-        <a data-aos="fade-left" href="#contact"><button>Kontakt</button></a>
-        <img class="grenn-shadow" src="assets/img/greenShadow2.png" alt="">
+        <a data-aos="fade-right" href="#contact"><button>Kontakt</button></a>
+        }@else {
+        <h1 data-aos="fade-right">My Skills</h1>
+        <span data-aos="fade-right">
+            I have developed my skills in frontend development, enabling me to implement various real projects.
+        </span>
+        <a data-aos="fade-right" href="#contact"><button>Contact</button></a>
+
+        }
+
     </div>
 
 
 </div>
+<img class="grenn-shadow" src="assets/img/greenShadow2.png" alt="">

@@ -1,9 +1,16 @@
-
+.header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
     .all{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 50px;
+    margin-top: 120px;
+    position: relative;
     
     .impressum{
         margin-top: 100px;
@@ -14,6 +21,21 @@
         align-items: center;
         text-align: center;
     }
+}
+.home{
+    a{
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 30px;
+        position: fixed;
+        right: 50px;
+        top: 170px;
+        &:hover{
+            color: rgba(151, 71, 255, 1);
+        }
+    }
+    
 }
 
 .datenschutz{

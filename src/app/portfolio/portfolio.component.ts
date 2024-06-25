@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  constructor(public ls:LanguageService){}
 
   names = [
     'Join',
@@ -21,6 +23,13 @@ export class PortfolioComponent {
   text = [
     'Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, und weisen Sie Benutzern und Kategorien zu.',
     'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.'
+  ]
+  englishText =[
+    
+    'Task manager based on the Kanban system. Create and organize tasks using drag-and-drop, and assign users and categories.',
+    'Spring, run, and throw game based on an object-oriented approach. Help Pepe find coins and Tabasco salsa to fight against the crazy chicken.'
+
+
   ]
 
   images = [

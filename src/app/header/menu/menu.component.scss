@@ -1,3 +1,13 @@
+.menu-open {
+  right: 0;
+  /* Position des Menüs, wenn es geöffnet ist */
+}
+
+.menu-closed {
+  right: -100%;
+  /* Startposition außerhalb des sichtbaren Bereichs */
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -8,11 +18,13 @@
   height: 85vh;
   width: 100%;
   position: absolute;
-  background-color: rgba(20, 29, 47, 0.8);
-  top: 140px;
+  background-color: rgba(20, 29, 47,);
+  top: 95px;
+  transition: right 0.3s ease;
+  /* Transition für die Verschiebung */
   max-width: 1990px;
   margin: 0px auto;
-  z-index: 999;
+
 
   a {
     color: white;
@@ -25,13 +37,19 @@
   }
 }
 
+
 .x {
   color: white;
   position: absolute;
   top: 30px;
   right: 30px;
   font-size: 32px;
-  &:hover{
+
+  &:hover {
     color: rgba(151, 71, 255, 1);
   }
+}
+
+app-footer {
+  display: none;
 }

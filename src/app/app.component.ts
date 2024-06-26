@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -17,7 +17,7 @@ import { isPlatformBrowser } from '@angular/common';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, IntroduceComponent, AppComponent, AboutMeComponent, MySkillsComponent,
-    PortfolioComponent, ContactComponent, FooterComponent, ImpressumComponent, MainComponent, MenuComponent],
+    PortfolioComponent, ContactComponent, FooterComponent, ImpressumComponent, MainComponent, MenuComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -36,5 +36,4 @@ export class AppComponent implements OnInit {
       });
     }
   }
-  german = true;
 }

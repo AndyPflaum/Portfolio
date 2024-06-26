@@ -2,36 +2,10 @@ section {
     max-width: 1990px;
     margin: 0px auto;
     margin-top: 200px;
-    .scroll {
-        transform: rotate(90deg);
-        position: absolute;
-        font-size: 20px;
-        top: 900px;
-        right: 0px;
-        cursor: pointer;
-        animation: move 1s ease-in-out infinite;
-        z-index: 99;
-        @media (max-width: 800px){
-            display: none;
-        }
-
+    position: relative;
         a {
             text-decoration: none;
             color: white;
-        }
-
-        @keyframes move {
-            0% {
-                top: 900px;
-            }
-
-            50% {
-                top: 920px;
-            }
-
-            100% {
-                top: 900px;
-            }
         }
     }
 
@@ -44,7 +18,6 @@ section {
         font-size: 16px;
         margin: 5px;
         
-
         @media (max-width: 1280px) {
             width: 100%;
             padding: 0px 100px;
@@ -53,8 +26,6 @@ section {
             width: 100%;
             padding: 0px 25px;
         }
-
-        
 
         h1 {
             font-size: 90px;
@@ -124,7 +95,7 @@ section {
         }
 
     }
-}
+
 
 .purple {
     position: absolute;

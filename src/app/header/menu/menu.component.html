@@ -1,11 +1,20 @@
-<div>
-    <div class="menu">
-        <a href="#aboutMe">Über mich</a>
-        <a href="#skills"> Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Kontakt</a>
-        <a class="x" href="">X</a>
-    </div>
+<div class="menu" [ngClass]="{'menu-open': ls.isMenuOpen, 'menu-closed': !ls.isMenuOpen}">
     
-    
+    @if (ls.german) {
+        <div class="menu">
+            <a (click)="closeMenu()" href="#aboutMe">Über mich</a>
+            <a (click)="closeMenu()" href="#skills"> Fähigkeiten</a>
+            <a (click)="closeMenu()" href="#portfolio">Portfolio</a>
+            <a (click)="closeMenu()" href="#contact">Kontakt</a>
+            <a (click)="closeMenu()" class="x">X</a>
+        </div>
+    }@else {
+        <div class="menu">
+            <a (click)="closeMenu()" href="#aboutMe">About me</a>
+            <a (click)="closeMenu()" href="#skills"> Skills</a>
+            <a (click)="closeMenu()" href="#portfolio">Portfolio</a>
+            <a (click)="closeMenu()" href="#contact">Contact</a>
+            <a (click)="closeMenu()" class="x">X</a>
+        </div>
+    }    
 </div>

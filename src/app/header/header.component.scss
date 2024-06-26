@@ -18,17 +18,26 @@
     @media (max-width: 1035px) {
         padding: 37px 25px;
     }
+
     
-    .links{
+
+    .links {
         display: flex;
-        @media(max-width:800px){
-            display: none;
+        position: relative;
+
+        
+        .linksMenuDisplayNone{
+            @media(max-width:830px) {
+                display: none;
+            }
         }
+        
     }
 
     img {
         cursor: pointer;
-        @media (min-width: 800px){
+
+        @media (min-width: 830px) {
             display: none;
         }
     }
@@ -62,11 +71,18 @@
         right: 30px;
     }
 }
-.germany{
-    height: 30px;
-    width: 50px;
-    display: block !important;
-    position: absolute;
-    top: 120px;
-    right: 50px;
+.menuGermany {
+    z-index: 9999;
+    position: fixed;
+    top: 100px;
+    right: 100px;
+
+    .germany {
+        height: 30px;
+        width: 50px;
+        display: block !important;
+
+        // z-index: 9999;
+        cursor: pointer;
+    }
 }

@@ -64,7 +64,8 @@
                 }
                 <div class="checkbox">
                     @if (ls.german) {
-                        <input (click)="toggleCheckbox()" type="checkbox"><a href="imprint">Datenschutzerklärung</a>
+                        <input (click)="toggleCheckbox()" type="checkbox">
+                        <a routerLink="/imprint">Datenschutzerklärung</a>
                     }@else {<input (click)="toggleCheckbox()" type="checkbox"><a href="imprint">Privacy Policy</a>}
                 </div>
 
@@ -84,7 +85,7 @@
     </div>
 
     <div class="gooUp">
-        <a href=""><img class="goUp" src="assets/img/goUpButton.png" alt=""></a>
+        <a href="#oben"><img class="goUp" src="assets/img/goUpButton.png" alt=""></a>
     </div>
 
     <div class="end-line"></div>

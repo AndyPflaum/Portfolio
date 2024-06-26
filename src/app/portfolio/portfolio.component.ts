@@ -25,11 +25,8 @@ export class PortfolioComponent {
     'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.'
   ]
   englishText =[
-    
     'Task manager based on the Kanban system. Create and organize tasks using drag-and-drop, and assign users and categories.',
     'Spring, run, and throw game based on an object-oriented approach. Help Pepe find coins and Tabasco salsa to fight against the crazy chicken.'
-
-
   ]
 
   images = [
@@ -43,7 +40,7 @@ export class PortfolioComponent {
   ]
 
   pages =[
-    'https://andreas-pflaum.developerakademie.net/join2/contacts.html',
+    'https://andreas-pflaum.developerakademie.net/join2/index.html',
     'https://andreas-pflaum.com/EL-POLLO-LOCO/'
   ]
 

@@ -1,21 +1,30 @@
-<!-- <app-header class="header"></app-header> -->
 <div class="all">
 
     <div class="impressum">
+        @if (ls.german) {
         <h1>Impressum</h1>
+        }@else {<h1>Imprint</h1>}
+
 
         <p>Andreas Pflaum<br />
             Neue Str.4<br />
             35799 Merenberg</p>
-
+        @if (ls.german) {
         <h2>Kontakt</h2>
         <p>Telefon: 015774422694<br />
             E-Mail: andyreas.pa&#64;gmail.com</p>
 
         <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
+        }@else {
+        <h2>Contact</h2>
+        <p>Phone: 015774422694<br />
+            E-Mail: andyreas.pa&#64;gmail.com</p>
+
+        <p>Source: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
+        }
     </div>
 </div>
-
+@if (ls.german) {
 <div class="datenschutz" id="datenschutz">
     <h1>Datenschutz&shy;erkl&auml;rung</h1>
     <h2>1. Datenschutz auf einen Blick</h2>
@@ -207,6 +216,115 @@
             rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
     <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
 </div>
+}@else {
+<div class="datenschutz" id="datenschutz">
+    <h1>Privacy Policy</h1>
+    <h2>1. Data Protection at a Glance</h2>
+    <h3>General Information</h3>
+    <p>The following information provides a simple overview of what happens to your personal data when you visit this
+        website. Personal data is any data by which you can be personally identified. For detailed information on the
+        subject of data protection, please refer to our privacy policy listed below this text.</p>
+    <h3>Data Collection on This Website</h3>
+    <h4>Who is responsible for data collection on this website?</h4>
+    <p>The data processing on this website is carried out by the website operator. You can find the contact details of
+        the website operator in the "Notice Concerning the Responsible Party" section of this privacy policy.</p>
+    <h4>How do we collect your data?</h4>
+    <p>Your data is collected, firstly, by you providing it to us. This can be, for example, data you enter in a contact
+        form.</p>
+    <p>Other data is collected automatically or after your consent when you visit the website by our IT systems. This is
+        mainly technical data (e.g., internet browser, operating system, or the time the page was accessed). This data
+        is collected automatically as soon as you enter this website.</p>
+    <h4>What do we use your data for?</h4>
+    <p>Part of the data is collected to ensure the website is provided correctly. Other data can be used to analyze your
+        user behavior.</p>
+    <h4>What rights do you have regarding your data?</h4>
+    <p>You have the right to obtain information about the origin, recipient, and purpose of your stored personal data at
+        any time without charge. You also have the right to request the correction or deletion of this data. If you have
+        given consent to data processing, you can revoke this consent at any time for the future. You also have the
+        right to request the restriction of the processing of your personal data under certain circumstances.
+        Furthermore, you have the right to file a complaint with the competent supervisory authority.</p>
+    <p>You can contact us at any time regarding this and other questions on the subject of data protection.</p>
+    <h2>2. General Information and Mandatory Information</h2>
+    <h3>Data Protection</h3>
+    <p>The operators of these pages take the protection of your personal data very seriously. We treat your personal
+        data confidentially and in accordance with the statutory data protection regulations and this privacy policy.
+    </p>
+    <p>When you use this website, various personal data is collected. Personal data is data by which you can be
+        personally identified. This privacy policy explains what data we collect and what we use it for. It also
+        explains how and for what purpose this happens.</p>
+    <p>We point out that data transmission over the Internet (e.g., communication by e-mail) can have security
+        vulnerabilities. Complete protection of data from access by third parties is not possible.</p>
+    <h3>Notice Concerning the Responsible Party</h3>
+    <p>The responsible party for data processing on this website is:</p>
+    <p>Andreas Pflaum<br />
+        Neue Str. 4<br />
+        35799 Merenberg</p>
+
+    <p>Phone: 015774422694<br />
+        E-mail: andyreas.pa&#64;gmail.com</p>
+    <p>The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and
+        means of processing personal data (e.g., names, e-mail addresses, etc.).</p>
+
+    <h3>Storage Duration</h3>
+    <p>Unless a more specific storage period is stated within this privacy policy, your personal data will remain with
+        us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or
+        revoke consent to data processing, your data will be deleted unless we have other legally permissible reasons
+        for storing your personal data (e.g., tax or commercial law retention periods); in the latter case, the deletion
+        will take place after these reasons cease to apply.</p>
+    <h3>General Information on the Legal Basis for Data Processing on This Website</h3>
+    <p>If you have consented to data processing, we process your personal data on the basis of Art. 6(1)(a) GDPR or Art.
+        9(2)(a) GDPR if special categories of data are processed according to Art. 9(1) GDPR. In the case of explicit
+        consent to the transfer of personal data to third countries, the data processing is also based on Art. 49(1)(a)
+        GDPR. If you have consented to the storage of cookies or access to information on your end device (e.g., via
+        device fingerprinting), the data processing is additionally based on § 25(1) TTDSG. The consent can be revoked
+        at any time. If your data is required for the fulfillment of a contract or for the implementation of
+        pre-contractual measures, we process your data on the basis of Art. 6(1)(b) GDPR. Furthermore, we process your
+        data if this is necessary for the fulfillment of a legal obligation on the basis of Art. 6(1)(c) GDPR. The data
+        processing may also be based on our legitimate interest according to Art. 6(1)(f) GDPR. The relevant legal bases
+        for each individual case are explained in the following paragraphs of this privacy policy.</p>
+    <h3>Recipients of Personal Data</h3>
+    <p>In the course of our business activities, we work with various external entities. In some cases, the transfer of
+        personal data to these external entities is also necessary. We only pass on personal data if this is necessary
+        within the framework of contract fulfillment, if we are legally obliged to do so (e.g., transfer of data to tax
+        authorities), if we have a legitimate interest according to Art. 6(1)(f) GDPR in the transfer, or if another
+        legal basis permits the data transfer. When using processors, we only pass on personal data of our customers on
+        the basis of a valid processing contract. In the case of joint processing, a joint processing contract is
+        concluded.</p>
+    <h3>Revocation of Your Consent to Data Processing</h3>
+    <p>Many data processing operations are only possible with your express consent. You can revoke an already given
+        consent at any time. The legality of the data processing carried out until the revocation remains unaffected by
+        the revocation.</p>
+    <h3>Right to Object to Data Collection in Special Cases and Direct Advertising (Art. 21 GDPR)</h3>
+    <p>IF THE DATA PROCESSING IS BASED ON ART. 6(1)(E) OR (F) GDPR, YOU HAVE THE RIGHT TO OBJECT TO THE PROCESSING OF
+        YOUR PERSONAL DATA AT ANY TIME FOR REASONS ARISING FROM YOUR PARTICULAR SITUATION; THIS ALSO APPLIES TO
+        PROFILING BASED ON THESE PROVISIONS. THE RESPECTIVE LEGAL BASIS ON WHICH PROCESSING IS BASED CAN BE FOUND IN
+        THIS PRIVACY POLICY. IF YOU OBJECT, WE WILL NO LONGER PROCESS YOUR AFFECTED PERSONAL DATA UNLESS WE CAN
+        DEMONSTRATE COMPELLING LEGITIMATE GROUNDS FOR THE PROCESSING THAT OVERRIDE YOUR INTERESTS, RIGHTS, AND FREEDOMS
+        OR THE PROCESSING IS FOR THE ASSERTION, EXERCISE, OR DEFENSE OF LEGAL CLAIMS (OBJECTION ACCORDING TO ART. 21(1)
+        GDPR).</p>
+    <p>IF YOUR PERSONAL DATA IS PROCESSED FOR DIRECT ADVERTISING, YOU HAVE THE RIGHT TO OBJECT AT ANY TIME TO THE
+        PROCESSING OF PERSONAL DATA CONCERNING YOU FOR THE PURPOSE OF SUCH ADVERTISING; THIS ALSO APPLIES TO PROFILING,
+        INSOFAR AS IT IS ASSOCIATED WITH SUCH DIRECT ADVERTISING. IF YOU OBJECT, YOUR PERSONAL DATA WILL NO LONGER BE
+        USED FOR DIRECT ADVERTISING PURPOSES (OBJECTION ACCORDING TO ART. 21(2) GDPR).</p>
+    <h3>Right to Lodge a Complaint with the Competent Supervisory Authority</h3>
+    <p>In the event of violations of the GDPR, data subjects have the right to lodge a complaint with a supervisory
+        authority, in particular in the member state of their habitual residence, their place of work, or the place of
+        the alleged violation. The right to lodge a complaint is without prejudice to other administrative or judicial
+        remedies.</p>
+    <h3>Right to Data Portability</h3>
+    <p>You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a
+        contract handed over to you or a third party in a common, machine-readable format. If you request the direct
+        transfer of the data to another controller, this will only be done to the extent technically feasible.</p>
+    <h3>Information, Correction, and Deletion</h3>
+    <p>Within the scope of the applicable legal provisions, you have the right to obtain information about your stored
+        personal data, its origin and recipient, and the purpose of the data processing at any time free of charge, and,
+        if applicable, a right to correction or deletion of this data. You can contact us at any time for this purpose
+        and for further questions on the subject of personal data.</p>
+    <h3>Right to Restriction of Processing</h3>
+    <p>You have the right to request the restriction of the processing of your personal data. You can contact us at
+</div>
+}
 <div class="home">
-    <a href="">X</a>
+    <a routerLink="/">X</a>
+
 </div>

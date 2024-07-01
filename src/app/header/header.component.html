@@ -1,5 +1,5 @@
 <div class="header">
-    
+
     <a href="#header">
         <div class="split-color">Andrea<span class="half-colored">s</span></div>
     </a>
@@ -8,23 +8,24 @@
     <div class="links">
         <div class="linksMenuDisplayNone">
             @if (ls.german){
-                <a href="#aboutMe">Über mich</a>
-                <a href="#skills">Fähigkeiten</a>
-                <a href="#portfolio">Portfolio</a>
-                }@else{
-                <a href="#aboutMe">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#portfolio">Portfolio</a>
-                }
+            <a href="#aboutMe">Über mich</a>
+            <a href="#skills">Fähigkeiten</a>
+            <a href="#portfolio">Portfolio</a>
+            }@else{
+            <a href="#aboutMe">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            }
         </div>
-        
+
         <div class="menuGermany">
             <img (click)="ls.toggleLanguage()" [src]="ls.imagePath" alt="Language Image" class="germany">
         </div>
     </div>
     <!-- <a class="menu" routerLink="/menü"> -->
-        <img (click)="ls.toggleMenu()" src="assets/img/burger menu.png" alt="">
+    <img (click)="ls.toggleMenu()" src="assets/img/burger menu.png" alt="">
+    <img class="germanyMobile" (click)="ls.toggleLanguage()" [src]="ls.imagePath" alt="Language Image">
     <!-- </a> -->
 </div>
-<app-menu></app-menu>
-
+<app-menu>
+</app-menu>

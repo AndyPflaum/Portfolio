@@ -1,12 +1,12 @@
-<section class="section">
+<section class="section" >
     <div class="contact" data-aos="fade-left">
-        <div class="line"></div>
+        <div class="line" ></div>
         @if (ls.german) {<h1>Kontakt</h1>}@else {<h1>Contact</h1>}
         
     </div>
 
     <div class="container">
-        <div class="interest" data-aos="fade-left">
+        <div class="interest"  data-aos="fade-left">
             @if (ls.german) {
             <h3>Interesse geweckt?</h3>
             <span>Nutzen Sie gerne dieses Formular, um mit mir in Kontakt zu treten. Ich bin gespannt darauf, von Ihnen
@@ -30,7 +30,7 @@
         <div class="mail" data-aos="fade-right">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-                <input [(ngModel)]="contactData.name" minlength="3" name="name" type="text" placeholder=" Your name"
+                <input [(ngModel)]="contactData.name" minlength="3" name="name" type="text" placeholder="Your name"
                     required #name="ngModel" [ngClass]="{'invalidForm': name.invalid && name.touched}">
                 @if (name.invalid && name.touched) {
                 @if (ls.german) {
@@ -70,8 +70,10 @@
                 </div>
 
                 @if (name.valid && mail.valid && message.valid) {
-                    @if (ls.german) {<button type="submit" [disabled]="!isChecked"
-                    [ngClass]="{ 'enabled-button': isChecked, 'disabled-button': !isChecked }">Senden</button>}
+                    @if (ls.german) {
+                        <button type="submit" [disabled]="!isChecked"
+                    [ngClass]="{ 'enabled-button': isChecked, 'disabled-button': !isChecked }">Senden</button>
+                }
                     @else {<button type="submit" [disabled]="!isChecked"
                     [ngClass]="{ 'enabled-button': isChecked, 'disabled-button': !isChecked }">Send</button>}
                 }
@@ -88,6 +90,5 @@
         <a href="#oben"><img class="goUp" src="assets/img/goUpButton.png" alt=""></a>
     </div>
 
-    <div class="end-line"></div>
 </section>
 <img src="assets/img/greenShadow2(1).png" alt="">

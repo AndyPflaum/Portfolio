@@ -1,11 +1,9 @@
 .menu-open {
   right: 0;
-  /* Position des Menüs, wenn es geöffnet ist */
 }
 
 .menu-closed {
-  right: -100%;
-  /* Startposition außerhalb des sichtbaren Bereichs */
+  right: -200%;
 }
 
 .menu {
@@ -15,13 +13,12 @@
   justify-content: center;
   gap: 80px;
   font-size: 40px;
-  height: 85vh;
+  height: 88vh;
   width: 100%;
   position: absolute;
+  top: 110px;
   background-color: rgba(20, 29, 47,);
-  top: 95px;
   transition: right 0.3s ease;
-  /* Transition für die Verschiebung */
   max-width: 1990px;
   margin: 0px auto;
 
@@ -29,6 +26,7 @@
   a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
@@ -36,7 +34,6 @@
     }
   }
 }
-
 
 .x {
   color: white;
@@ -50,6 +47,3 @@
   }
 }
 
-app-footer {
-  display: none;
-}

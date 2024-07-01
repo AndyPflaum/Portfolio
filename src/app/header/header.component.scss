@@ -2,87 +2,97 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 110px;
     gap: 0px;
     opacity: 0px;
     padding: 37px 100px;
-    max-width: 1793px;
+    max-width: 1990px;
     margin: 0px auto;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 9999;
-    background-color:
-        rgba(20, 29, 47, 1);
-
+    background-color: rgba(20, 29, 47, 1);
+    overflow: hidden;
+    box-sizing: border-box;
+  
     @media (max-width: 1035px) {
-        padding: 37px 25px;
+      padding: 37px 25px;
     }
-
-    
-
+  
     .links {
-        display: flex;
-        position: relative;
-
-        
-        .linksMenuDisplayNone{
-            @media(max-width:830px) {
-                display: none;
-            }
+      display: flex;
+      position: relative;
+  
+      .linksMenuDisplayNone {
+        @media (max-width: 830px) {
+          display: none;
         }
-        
+      }
     }
-
+  
     img {
-        cursor: pointer;
-
-        @media (min-width: 830px) {
-            display: none;
-        }
+      cursor: pointer;
+  
+      @media (min-width: 830px) {
+        display: none;
+      }
     }
-
+  
     a {
-        color: white;
-        text-decoration: none;
-        padding: 20px;
-        font-size: 30px;
-
-        &:hover {
-            color: #70E61C;
-        }
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 30px;
+  
+      &:hover {
+        color: #70e61c;
+      }
     }
-
+  
     p {
-        color: white;
-        font-size: 45px;
-        cursor: pointer;
-        position: relative;
+      color: white;
+      font-size: 45px;
+      cursor: pointer;
+      position: relative;
     }
-
+  
     .letter-s {
-        span {
-            color: linear;
-        }
+      span {
+        color: linear;
+      }
     }
-
+  
     .menu {
-        position: absolute;
-        right: 30px;
+      position: absolute;
+      right: 30px;
     }
-}
-.menuGermany {
+  }
+  
+  .menuGermany {
     z-index: 9999;
-    position: fixed;
-    top: 100px;
-    right: 100px;
-
-    .germany {
-        height: 30px;
-        width: 50px;
-        display: block !important;
-
-        // z-index: 9999;
-        cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+  
+    @media (max-width: 830px) {
+      display: none;
     }
-}
+  
+    .germany {
+      height: 30px;
+      width: 50px;
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  .germanyMobile {
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    top: 80px;
+    right: 25px;
+  }
+  

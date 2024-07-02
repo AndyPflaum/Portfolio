@@ -40,6 +40,7 @@
         height: auto;
         gap: 150px;
         padding-left: 200px;
+        padding-right: 50px;
         margin-top: 50px;
         margin-bottom: 50px;
         z-index: 6;
@@ -63,7 +64,8 @@
         }
 
         img {
-            height: 100px;
+            height: auto;
+            width: 75px;
             transition: all 150ms ease-in-out;
             cursor: pointer;
             position: absolute;
@@ -74,7 +76,7 @@
             }
 
             &:hover {
-                height: 110px;
+                height: 85px;
                 @media (max-width:750px){
                     height: 80px;
                 }

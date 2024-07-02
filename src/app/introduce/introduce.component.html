@@ -1,7 +1,5 @@
-<section id="oben">
-    <div class="header" id="I">
-        <app-header></app-header>
-    </div>
+<section id="above">
+
     <div class="scroll">
         @if (ls.german) {
         <a href="#aboutMe"><span>Runterscrollen &rarr;</span></a>
@@ -10,37 +8,38 @@
         }
 
     </div>
-    
-        <div class="iAndInfo">
 
-            <div class="picture">
+    <div class="iAndInfo">
 
-                <img class="andy" src="assets/img/andy.png" alt="">
-            </div>
+        <div class="picture">
 
-            <div class="you">
-                
-                <div class="frontend">
-                    @if (ls.german) {
-                        <div class="iAm">Ich bin</div>
-                        }@else {
-                        <div class="iAm">I am</div>
-                        }
-                    <div class="two">
-                        <h1><b>Andreas Pflaum</b> </h1>
-                        <span class="frontendDeveloper">FRONTEND DEVELOPER</span>
-                    </div>
-                    @if (ls.german){
-                    <a href="#contact"><button>Kontakt</button></a>
-                    }@else {
-                    <a href="#contact"><button>Let’s talk!</button></a>
-                    }
-
-                </div>
-
-            </div>
+            <img class="andy" src="assets/img/andy.png" alt="">
         </div>
     
+        <div class="you">
+
+            <div class="frontend">
+                @if (ls.german) {
+                <div class="iAm">Ich bin</div>
+                }@else {
+                <div class="iAm">I am</div>
+                }
+                <div class="two">
+                    <h1><b>Andreas Pflaum</b> </h1>
+                    <span class="frontendDeveloper">FRONTEND DEVELOPER</span>
+                </div>
+                @if (ls.german){
+                <a href="#contact"><button>Kontakt</button></a>
+                }@else {
+                <a href="#contact"><button>Let’s talk!</button></a>
+                }
+
+            </div>
+
+        </div>
+        
+    </div>
+
     <div class="about-me" data-aos="fade-left">
         <div class="line"></div>
         <a href="https://github.com/AndyPflaum" target="_blank"><img src="assets/img/vector(1).png" alt=""></a>

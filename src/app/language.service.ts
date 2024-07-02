@@ -7,6 +7,7 @@ export class LanguageService {
 
   constructor() { }
   german = true;
+  isMobile = false;
   imagePath: string = 'assets/img/germany.png';
   isMenuOpen: boolean = false;
 
@@ -17,7 +18,7 @@ export class LanguageService {
 
   
   toggleMenu(){
-    this.isMenuOpen = !this.isMenuOpen;    
+    this.isMenuOpen = !this.isMenuOpen;
+    
   }
-  
 }

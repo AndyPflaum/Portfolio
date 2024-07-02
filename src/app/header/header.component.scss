@@ -1,98 +1,108 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 110px;
-    gap: 0px;
-    opacity: 0px;
-    padding: 37px 100px;
-    max-width: 1990px;
-    margin: 0px auto;
-    position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  width: 100%;
+  gap: 0px;
+  opacity: 0px;
+  padding: 37px 100px;
+  max-width: 1990px;
+  margin: 0px auto;
+  background-color: rgba(20, 29, 47, 1);
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
     top: 0;
-    right: 0;
     left: 0;
-    z-index: 9999;
+    width: 200vw; // Volle Breite des Viewports
+    height: 100%; // Volle Höhe des Containers
     background-color: rgba(20, 29, 47, 1);
-    overflow: hidden;
-    box-sizing: border-box;
-  
-    @media (max-width: 1035px) {
-      padding: 37px 25px;
-    }
-  
-    .links {
-      display: flex;
-      position: relative;
-  
-      .linksMenuDisplayNone {
-        @media (max-width: 830px) {
-          display: none;
-        }
-      }
-    }
-  
-    img {
-      cursor: pointer;
-  
-      @media (min-width: 830px) {
+    z-index: -1; // Sicherstellen, dass das Pseudoelement hinter dem Header bleibt
+    transform: translateX(-100vw);
+  }
+
+  @media (max-width: 1035px) {
+    padding: 37px 25px;
+  }
+
+  .links {
+    display: flex;
+    position: relative;
+
+    .linksMenuDisplayNone {
+      @media (max-width: 830px) {
         display: none;
       }
     }
-  
-    a {
-      color: white;
-      text-decoration: none;
-      padding: 20px;
-      font-size: 30px;
-  
-      &:hover {
-        color: #70e61c;
-      }
-    }
-  
-    p {
-      color: white;
-      font-size: 45px;
-      cursor: pointer;
-      position: relative;
-    }
-  
-    .letter-s {
-      span {
-        color: linear;
-      }
-    }
-  
-    .menu {
-      position: absolute;
-      right: 30px;
-    }
   }
-  
-  .menuGermany {
-    z-index: 9999;
-    position: absolute;
-    top: 40px;
-    right: 50px;
-  
-    @media (max-width: 830px) {
+
+  img {
+    cursor: pointer;
+
+    @media (min-width: 830px) {
       display: none;
     }
-  
-    .germany {
-      height: 30px;
-      width: 50px;
-      display: block;
-      cursor: pointer;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 30px;
+
+    &:hover {
+      color: #70e61c;
     }
   }
-  
-  .germanyMobile {
+
+  p {
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .letter-s {
+    span {
+      color: linear;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    right: 30px;
+  }
+}
+
+.menuGermany {
+  z-index: 9999;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+
+  @media (max-width: 830px) {
+    display: none;
+  }
+
+  .germany {
     height: 30px;
     width: 50px;
-    position: absolute;
-    top: 80px;
-    right: 25px;
+    display: block;
+    cursor: pointer;
   }
-  
+}
+
+.germanyMobile {
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+}

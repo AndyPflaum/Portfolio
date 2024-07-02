@@ -7,6 +7,7 @@ section {
     margin: 0px auto;
     position: relative;
     box-sizing: border-box;
+    overflow-x: hidden;
 
     .header {
         position: fixed;
@@ -40,13 +41,20 @@ section {
             text-decoration: none;
             cursor: pointer;
             font-size: 30px;
-            position: absolute;
+            position: fixed;
             right: 100px;
             top: 170px;
+            @media (max-width:1035px) {
+                right: 50px ;
+            }
+            @media (max-width:830px) {
+                right: 25px;
+            }
 
             &:hover {
                 color: rgba(151, 71, 255, 1);
             }
+            
         }
 
     }

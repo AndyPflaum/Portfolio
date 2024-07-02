@@ -1,9 +1,12 @@
+
 .menu-open {
   right: 0;
+  height: 100vh;
 }
 
 .menu-closed {
   right: -200%;
+  height: 0vh;
 }
 
 .menu {
@@ -13,14 +16,16 @@
   justify-content: center;
   gap: 80px;
   font-size: 40px;
-  height: 88vh;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 110px;
   background-color: rgba(20, 29, 47,);
   transition: right 0.3s ease;
   max-width: 1990px;
   margin: 0px auto;
+  @media (max-height:580px) {
+    gap: 50px;
+  }
 
 
   a {
@@ -45,5 +50,8 @@
   &:hover {
     color: rgba(151, 71, 255, 1);
   }
+}
+.example::-webkit-scrollbar {
+  display: none;
 }
 

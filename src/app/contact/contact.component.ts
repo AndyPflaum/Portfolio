@@ -53,7 +53,6 @@ export class ContactComponent {
             }, 3000);
           },
           error: (error) => {
-            console.error(error);
           },
           complete: () => console.info('send post complete'),
         

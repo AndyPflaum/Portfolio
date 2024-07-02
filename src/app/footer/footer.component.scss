@@ -4,10 +4,9 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1990px;
-    margin: 0px auto;
-    padding: 0px 120px;
+    margin: 0 auto;
+    padding: 0 120px; // Verringere das Padding für eine bessere Zentrierung
     box-sizing: border-box;
-    overflow: hidden;
     position: relative;
 
     @media (max-width: 1035px) {
@@ -15,7 +14,6 @@
     }
 
     @media (max-width: 800px) {
-        display: flex;
         flex-direction: column;
         text-align: center;
         height: 200px;
@@ -40,29 +38,29 @@
             cursor: pointer;
             transform: rotate(360deg);
         }
-
     }
 
     .images {
         display: flex;
         gap: 30px;
-
     }
 
     .end-line {
         position: absolute;
-        top: 0px;
-        left: 0;
-        right: 0;
-        width: 200vw;
-        border-bottom: 3px solid rgba(112, 230, 28, 1);
+        top: 0;
+        left: 50%;
+        width: 100vw; // Gesamtbreite des Viewports
+        height: 3px;
+        background-color: rgba(112, 230, 28, 1);
         z-index: 2;
-        margin-left: -100vw;
-        margin-right: -100vw;
-        @media (max-width:550px) {
+        transform: translateX(-50%);
+
+        @media (max-width: 550px) {
             position: relative;
             top: -15px;
+            width: 100%;
+            left: 0;
+            transform: none;
         }
     }
-
 }

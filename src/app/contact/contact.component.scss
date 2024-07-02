@@ -4,16 +4,18 @@
     margin-bottom: 50px;
     
 
-    .gooUp {
-        position: relative;
 
-        .goUp {
-            position: absolute;
-            top: 30px;
-            right: 50px;
-            cursor: pointer;
-            z-index: 99;
-        }
+}
+.gooUp {
+    position: relative;
+
+    .goUp {
+        position: absolute;
+        top: 0px;
+        right: 100px;
+        cursor: pointer;
+        z-index: 99;
+        margin-bottom: 50px;
     }
 }
 

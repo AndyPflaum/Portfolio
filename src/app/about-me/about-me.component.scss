@@ -84,6 +84,7 @@ section {
         z-index: 2;
         position: relative;
         margin-right: -37vw;
+        transform: translateX(auto);
 
         @media (max-width: 1280px) {
             width: 95px;

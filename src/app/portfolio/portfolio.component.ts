@@ -40,7 +40,7 @@ export class PortfolioComponent {
   ]
 
   pages =[
-    'https://andreas-pflaum.developerakademie.net/join2/index.html',
+    'https://andreas-pflaum.com/Join/index.html',
     'https://andreas-pflaum.com/EL-POLLO-LOCO/'
   ]
 

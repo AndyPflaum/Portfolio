@@ -1,14 +1,14 @@
 .all{
+    box-sizing: border-box;
     overflow: hidden;
+
     .o-hidden{
         height: 100vh;
     }
     #portfolio, #aboutMe, #contact{
         scroll-margin-top: 200px;
     }
-}
-app-footer{
-    max-width: 1990px;
-    margin: 0px auto;
-    overflow: hidden;
+    #skills{
+        scroll-margin-top: 100px;
+    }
 }

@@ -1,7 +1,8 @@
 <div class="skill">
     <div class="wrap" data-aos="fade-left">
-        <div *ngFor="let image of images; let i = index">
+        <div class="wrap-images" *ngFor="let image of images; let i = index">
             <img class="itIsIcon" src="{{images[i]}}" alt="">
+            <span> {{imagesName[i]}}</span>
         </div>
     </div>
     <div class="mySkills">

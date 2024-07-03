@@ -21,10 +21,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 200vw; // Volle Breite des Viewports
-    height: 100%; // Volle Höhe des Containers
+    width: 200vw; 
+    height: 100%; 
     background-color: rgba(20, 29, 47, 1);
-    z-index: -1; // Sicherstellen, dass das Pseudoelement hinter dem Header bleibt
+    z-index: -1; 
     transform: translateX(-100vw);
   }
 
@@ -37,16 +37,26 @@
     position: relative;
 
     .linksMenuDisplayNone {
-      @media (max-width: 830px) {
-        display: none;
+      display: flex;
+      align-items: center;
+  
+      @media (max-width:880px) {
+          display: none;
       }
+    
+      img{
+        height: 30px;
+        display: block ;
+
+      }
+      
     }
   }
 
   img {
     cursor: pointer;
 
-    @media (min-width: 830px) {
+    @media (min-width: 881px) {
       display: none;
     }
   }
@@ -96,13 +106,14 @@
     width: 50px;
     display: block;
     cursor: pointer;
+    display: block !important;
   }
 }
 
-.germanyMobile {
-  height: 30px;
-  width: 50px;
-  position: absolute;
-  top: 80px;
-  right: 25px;
-}
+// .germanyMobile {
+//   height: 30px;
+//   width: 50px;
+//   position: absolute;
+//   top: 80px;
+//   right: 25px;
+// }

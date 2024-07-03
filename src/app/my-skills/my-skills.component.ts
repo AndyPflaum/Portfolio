@@ -12,16 +12,29 @@ import { LanguageService } from '../language.service';
 export class MySkillsComponent {
   constructor(public ls:LanguageService){}
   images =[
-    'assets/img/skills/Icon + Name.png',
-    'assets/img/skills/Frame 6.png',
-    'assets/img/skills/Frame 7.png',
-    'assets/img/skills/Frame 8.png',
-    'assets/img/skills/Frame 9.png',
-    'assets/img/skills/Frame 10.png',
-    'assets/img/skills/Frame 11.png',
-    'assets/img/skills/Frame 12.png',
-    'assets/img/skills/Frame 13.png',
-    'assets/img/skills/Frame 18.png',
+    'assets/img/skills/Angular.png',
+    'assets/img/skills/JavScript.png',
+    'assets/img/skills/Firebase.png',
+    'assets/img/skills/Scrum.png',
+    'assets/img/skills/Git.png',
+    'assets/img/skills/HTML.png',
+    'assets/img/skills/CSS.png',
+    'assets/img/skills/Typescript.png',
+    'assets/img/skills/API.png',
+    'assets/img/skills/Design.png',
+  ]
+
+  imagesName = [
+    'Angular',
+    'JavaScript',
+    'Firabase',
+    'Scrum',
+    'GIT',
+    'HTML',
+    'CSS',
+    'TypeScript',
+    'Rest-Api',
+    'Material Design'
   ]
 
 }

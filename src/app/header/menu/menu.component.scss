@@ -23,10 +23,13 @@
   transition: right 0.3s ease;
   max-width: 1990px;
   margin: 0px auto;
-  @media (max-height:580px) {
+  @media (max-height:705px) {
     gap: 50px;
+    justify-content: flex-start
   }
-
+img{
+  height: 30px;
+}
 
   a {
     color: white;

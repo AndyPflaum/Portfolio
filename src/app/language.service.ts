@@ -8,12 +8,12 @@ export class LanguageService {
   constructor() { }
   german = true;
   isMobile = false;
-  imagePath: string = 'assets/img/germany.png';
+  imagePath: string = 'assets/img/english.png';
   isMenuOpen: boolean = false;
 
   toggleLanguage(){
     this.german = !this.german;
-    this.imagePath = this.german ? 'assets/img/germany.png' : 'assets/img/english.png';
+    this.imagePath = this.german ? 'assets/img/english.png' : 'assets/img/germany.png';
   }
 
   
@@ -22,3 +22,4 @@ export class LanguageService {
     
   }
 }
+
